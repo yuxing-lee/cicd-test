@@ -8,6 +8,7 @@ services:
       - 80:80
     volumes:
       - /var/lib/drone:/var/lib/drone/
+      - /data:/data
     restart: always
     environment:
       - DRONE_SERVER_HOST="{YOUR_MACHINE_HOST}"
