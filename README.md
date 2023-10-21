@@ -3,6 +3,7 @@
 # build environment
 
 1. install docker & docker-compose
+    - execute install/install_docker.sh
 2. register [ngrok](https://dashboard.ngrok.com/) account and get auth token
 3. install ngrok and run 
     ```bash
