@@ -31,7 +31,32 @@
     - open https://<ngrok_url>
 7. successfully login drone
 
+# install k8s node
+
+## install kubectl
+```bash
+sudo apt-get update && sudo apt-get install -y curl wget virtualbox apt-transport-https
+curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
+echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee /etc/apt/sources.list.d/kubernetes.list
+sudo apt-get update
+sudo apt-get install -y kubectl
+```
+
+## install minikube
+```bash
+curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+sudo install minikube-linux-amd64 /usr/local/bin/minikube
+minikube version
+```
+
+## start minikube
+```bash
+minikube start
+kubectl cluster-info
+```
+
 # reference
 
 - [Install docker/docker-compose](https://www.51cto.com/article/715086.html)
 - [How to setup drone environment](https://medium.com/starbugs/%E5%BE%9E%E9%9B%B6%E9%96%8B%E5%A7%8B%E5%AD%B8-devops-%E9%82%A3%E5%B0%B1%E9%81%B8%E6%93%87%E6%9C%80%E7%B0%A1%E5%96%AE%E7%9A%84-drone-ci-%E9%96%8B%E5%A7%8B%E5%90%A7-931126671139)
+- [Install minikube](https://www.learnitguide.net/2023/04/how-to-install-minikube-on-ubuntu-2204.html)
