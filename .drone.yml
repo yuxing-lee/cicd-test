@@ -4,11 +4,6 @@ type: docker
 name: default
 
 steps:
-- name: backend
-  image: golang:1.13-alpine
-  commands:
-  - go build
-  - go test
 - name: docker
   image: plugins/docker
   settings:
