@@ -1,0 +1,14 @@
+kind: pipeline
+name: default
+
+steps:
+- name: docker
+  image: plugins/docker
+  settings:
+    registry: docker.pkg.github.com
+    repo: docker.pkg.github.com/yuxing-lee/cicd-test/apache
+    auto_tag: true
+    auto_tag_suffix: apache
+    username: yuxing-lee
+    password:
+      from_secret: GITHUB_TOKEN
