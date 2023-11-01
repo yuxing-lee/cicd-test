@@ -1,5 +1,13 @@
 # CI/CD-test
 
+# ultimate goal
+
+- [x] use drone CI/CD
+- [x] use github registry
+- [x] use multi platform
+- [x] use k8s
+- [x] use slack notification
+
 # build environment
 
 1. install docker & docker-compose
@@ -60,3 +68,4 @@ kubectl cluster-info
 - [Install docker/docker-compose](https://www.51cto.com/article/715086.html)
 - [How to setup drone environment](https://medium.com/starbugs/%E5%BE%9E%E9%9B%B6%E9%96%8B%E5%A7%8B%E5%AD%B8-devops-%E9%82%A3%E5%B0%B1%E9%81%B8%E6%93%87%E6%9C%80%E7%B0%A1%E5%96%AE%E7%9A%84-drone-ci-%E9%96%8B%E5%A7%8B%E5%90%A7-931126671139)
 - [Install minikube](https://www.learnitguide.net/2023/04/how-to-install-minikube-on-ubuntu-2204.html)
+- [Github Docker combine with Drone](https://blog.wu-boy.com/2019/09/upload-docker-image-to-github-registry-using-drone/)
