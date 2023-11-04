@@ -31,6 +31,25 @@
 - [ ] notification
     - [ ] slack
 
+# Flow
+
+```mermaid
+graph LR;
+    git_action-->lint;
+    subgraph CI
+        lint-->test;
+        test-->build;
+    end
+    subgraph CD
+        build-->deploy;
+        deploy-->notification;
+    end
+    test -- fail --> notification;
+    lint -- fail --> notification;
+    build -- fail --> notification;
+    deploy -- fail --> notification;
+```
+
 # About Drone 
 
 ## Drone Server
