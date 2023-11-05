@@ -17,3 +17,11 @@ steps:
   when:
     event:
     - tag
+trigger: 
+  branch: 
+  - master
+  - develop
+  - feature/*
+  event:
+  - push
+  - tag
