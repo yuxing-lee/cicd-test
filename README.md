@@ -4,17 +4,17 @@
 
 - [ ] CI/CD tools
     - [x] drone
-    - [ ] gitlab ci 
-    - [ ] jenkins 
+    - [ ] gitlab ci
+    - [ ] jenkins
     - [ ] travis ci
-    - [ ] circleci 
+    - [ ] circleci
 - [ ] git repo
     - [x] github
     - [ ] gitlab
     - [ ] gitea
     - [ ] bitbucket
 - [ ] lint
-    - [ ] python
+    - [x] python
     - [ ] javascript
 - [ ] test
     - [ ] python
@@ -23,7 +23,7 @@
     - [ ] docker hub
     - [ ] private docker repository
     - [x] github docker registry
-- [ ] deploy 
+- [ ] deploy
     - [ ] host machine
     - [ ] remote machine
     - [ ] kubernetes
@@ -50,7 +50,7 @@ graph LR;
     deploy -- fail --> notification;
 ```
 
-# About Drone 
+# About Drone
 
 ## Drone Server
 
@@ -70,6 +70,15 @@ graph LR;
 4. VM runner
     - run pipeline in VM
 
+# About Python Lint
+
+- flake8
+    1. Syntax Checking
+    2. PEP8 Checking
+    3. McCabe Complexity Checking
+- isort
+    - Adjust the format of imported libraries
+
 # Build Environment
 
 ## Install Docker
@@ -77,7 +86,7 @@ graph LR;
 1. install docker & docker-compose
     - execute install/install_docker.sh
 2. register [ngrok](https://dashboard.ngrok.com/) account and get auth token
-3. install ngrok and run 
+3. install ngrok and run
     ```bash
     wget https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz
     tar -zxvf ngrok-v3-stable-linux-amd64.tgz
@@ -94,7 +103,7 @@ graph LR;
     - DRONE_SERVER_HOST="{YOUR_MACHINE_HOST}"
     - DRONE_GITHUB_CLIENT_ID="{CLIENT_ID}"
     - DRONE_GITHUB_CLIENT_SECRET="{CLIENT_SECRET}"
-5. use docker-compose run drone-server 
+5. use docker-compose run drone-server
     ```bash
     cd drone
     sudo docker-compose up -d

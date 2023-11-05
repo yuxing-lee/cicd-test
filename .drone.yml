@@ -17,8 +17,8 @@ steps:
   when:
     event:
     - tag
-trigger: 
-  branch: 
+trigger:
+  branch:
   - master
   - develop
   - feature/*
