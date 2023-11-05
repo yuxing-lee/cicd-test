@@ -12,7 +12,7 @@ ENV PYTHONUNBUFFERED 1
 RUN pip install --upgrade pip 
 
 # copy project
-COPY . /usr/src/backend
+COPY backend /usr/src/backend
 RUN pip install -r requirements.txt
 
 EXPOSE 8000
