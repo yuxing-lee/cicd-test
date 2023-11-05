@@ -8,9 +8,14 @@ steps:
   image: plugins/docker
   settings:
     registry: ghcr.io
-    repo: ghcr.io/yuxing-lee/cicd-test/apache
-    auto_tag: true
-    auto_tag_suffix: apache
+    repo: ghcr.io/yuxing-lee/cicd-test/backend
+    tags: ["${DRONE_COMMIT_SHA:0:7}", "latest"]
+    dockerfile: ./backend/Dockerfile
     username: yuxing-lee
     password:
       from_secret: GITHUB_TOKEN
+  when:
+    branch:
+    - develop
+    event:
+    - tag
