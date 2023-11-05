@@ -2,7 +2,7 @@
 FROM python:3.8.3-alpine
 
 # set work directory
-WORKDIR /usr/src/app
+WORKDIR /usr/src/backend
 
 # set environment variables
 ENV PYTHONDONTWRITEBYTECODE 1
@@ -10,11 +10,10 @@ ENV PYTHONUNBUFFERED 1
 
 # install dependencies
 RUN pip install --upgrade pip 
-COPY ./requirements.txt /usr/src/app
-RUN pip install -r requirements.txt
 
 # copy project
-COPY . /usr/src/app
+COPY ./backend /usr/src/backend
+RUN pip install -r requirements.txt
 
 EXPOSE 8000
 
