@@ -1,5 +1,5 @@
 # pull the official base image
-FROM python:3.8.3-alpine
+FROM python:3.9.18-alpine
 
 # set work directory
 WORKDIR /usr/src/backend
@@ -12,7 +12,7 @@ ENV PYTHONUNBUFFERED 1
 RUN pip install --upgrade pip 
 
 # copy project
-COPY ./backend /usr/src/backend
+COPY . /usr/src/backend
 RUN pip install -r requirements.txt
 
 EXPOSE 8000
