@@ -28,8 +28,8 @@
     - [ ] remote machine
     - [ ] kubernetes
         - [ ] minikube
-- [ ] notification
-    - [ ] slack
+- [x] notification
+    - [x] slack
 
 # Flow
 
